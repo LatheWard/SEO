@@ -1,4 +1,4 @@
-package com.example.SEO.User;
+package User;
 
 import javax.persistence.*;
 
