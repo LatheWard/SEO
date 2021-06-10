@@ -1,29 +1,15 @@
-package com.example.SEO.User;
+package com.example.SEO;
 import javax.persistence.*;
 
 @Entity
 @Table
 public class User {
     @Id
-    @SequenceGenerator(
-            name = "User_sequence",
-            sequenceName = "User_sequence",
-            allocationSize = 1
-
-    )
-    @GeneratedValue(
-            strategy=GenerationType.SEQUENCE,
-            generator = "User_sequence"
-        )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String firstName;
     private String lastName;
 
-    public User(Long id, String firstName, String lastName) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
 
     public Long getId() {
         return id;

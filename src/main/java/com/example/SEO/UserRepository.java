@@ -1,6 +1,5 @@
-package com.example.SEO.User;
+package com.example.SEO;
 import org.springframework.data.repository.CrudRepository;
-import com.example.SEO.User.User;
 
 
 public interface UserRepository extends CrudRepository<User, Integer> {
