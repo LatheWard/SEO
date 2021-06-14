@@ -25,7 +25,7 @@ public class UserRepositoryTests {
     @Test
     public void testCreateUser() {
         User user = new User();
-        user.setUsername("test@gmail.com");
+        user.setEmail("test@gmail.com");
         user.setPassword("ravi2020");
         user.setFirstName("Ravi");
         user.setLastName("Kumar");
@@ -34,7 +34,7 @@ public class UserRepositoryTests {
 
         User existUser = entityManager.find(User.class, savedUser.getId());
 
-        assertThat(user.getUsername()).isEqualTo(existUser.getUsername());
+        assertThat(user.getEmail()).isEqualTo(existUser.getEmail());
 
     }
 }
